@@ -1,0 +1,19 @@
+Os tipos de literal de string no TypeScript nos permitem modelar funções e APIs que esperam um conjunto de strings específicas.
+
+function setVerticalAlignment(location: "top" | "middle" | "bottom") {
+  // ...
+}
+
+setVerticalAlignment("middel");
+Argument of type '"middel"' is not assignable to parameter of type '"top" | "middle" | "bottom"'.
+
+
+type Options = {
+  [K in "noImplicitAny" | "strictNullChecks" | "strictFunctionTypes"]?: boolean;
+};
+// same as
+//   type Options = {
+//       noImplicitAny?: boolean,
+//       strictNullChecks?: boolean,
+//       strictFunctionTypes?: boolean
+//   };
